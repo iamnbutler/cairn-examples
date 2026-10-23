@@ -18,7 +18,9 @@ own. Cairn is early research.
 | [`lean/Examples/Basics/Tests.lean`](lean/Examples/Basics/Tests.lean) | Runtime checks on concrete states. |
 | [`lean/Examples/Todo.lean`](lean/Examples/Todo.lean) | TodoMVC's claims: ^201 to ^224, mapped to the TodoMVC spec. |
 | [`lean/Examples/Todo/`](lean/Examples/Todo/) | TodoMVC's model, view, tests and the ABI, with a [README](lean/Examples/Todo/README.md) that lists the design decisions and known gaps. |
-| [`lean/Examples/Counter.lean`](lean/Examples/Counter.lean) | The first spike: a counter with Increment, and Reset only while there is something to reset. |
+| [`lean/Examples/Todo/Proofs.lean`](lean/Examples/Todo/Proofs.lean) | TodoMVC's proofs. Each control is present exactly when its move is enabled. Every control is clickable at its centre in every state, for any font metrics, at window sizes from the minimum up. The invariants hold in every reachable state. |
+| [`lean/Examples/Counter.lean`](lean/Examples/Counter.lean) | A counter with Increment, and Reset only while there is something to reset. Its `retire ^6` line shows how a claim is retired. |
+| [`lean/Examples/Counter/Proofs.lean`](lean/Examples/Counter/Proofs.lean) | Reset is on screen iff the count is above zero; every control is clickable in every state. |
 | [`host/Sources/CairnBasics/main.swift`](host/Sources/CairnBasics/main.swift) | The Swift side of Basics: it opens a window and hands Lean events. There is no app logic in it. |
 | [`host/Sources/CairnCounter/main.swift`](host/Sources/CairnCounter/main.swift) | The same for Counter. |
 | [`host/Sources/CairnTodo/main.swift`](host/Sources/CairnTodo/main.swift) | The same for TodoMVC. |
