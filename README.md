@@ -4,7 +4,7 @@ Example apps for **Cairn**, a research UI framework where apps are written in [L
 and every thing a person can do is a **claim**: a durable id (`^104`) with machine-checked
 evidence of what it does. A thin Swift host runs the app natively on the Mac and Metal draws it.
 
-▶ [The first Lean app running natively on the Mac](https://cairn.iamnbutler.workers.dev/m/videos/c8a7c8d6ab57ac2f.mp4) (Basics, 17 s)
+▶ [TodoMVC, written in Lean, running natively on the Mac](https://cairn.iamnbutler.workers.dev/m/videos/5cf436dca2cd5034.mp4) (28 s)
 
 These files are published to read. The framework isn't public yet, so they don't build on their
 own. Cairn is early research.
@@ -13,12 +13,15 @@ own. Cairn is early research.
 
 | File | What it is |
 |---|---|
-| [`lean/Examples/Basics.lean`](lean/Examples/Basics.lean) | A small todo list: state, moves, the invariant, flows and the view. Start here. |
+| [`lean/Examples/Basics.lean`](lean/Examples/Basics.lean) | A small todo list in one file: state, moves, the invariant, flows and the view. Start here. |
 | [`lean/Examples/Basics/Proofs.lean`](lean/Examples/Basics/Proofs.lean) | Theorems about the view: presence (each item's controls exist exactly when the item does), the footer, and pressability. |
 | [`lean/Examples/Basics/Tests.lean`](lean/Examples/Basics/Tests.lean) | Runtime checks on concrete states. |
+| [`lean/Examples/Todo.lean`](lean/Examples/Todo.lean) | TodoMVC's claims: ^201 to ^224, mapped to the TodoMVC spec. |
+| [`lean/Examples/Todo/`](lean/Examples/Todo/) | TodoMVC's model, view, tests and the ABI, with a [README](lean/Examples/Todo/README.md) that lists the design decisions and known gaps. |
 | [`lean/Examples/Counter.lean`](lean/Examples/Counter.lean) | The first spike: a counter with Increment, and Reset only while there is something to reset. |
 | [`host/Sources/CairnBasics/main.swift`](host/Sources/CairnBasics/main.swift) | The Swift side of Basics: it opens a window and hands Lean events. There is no app logic in it. |
 | [`host/Sources/CairnCounter/main.swift`](host/Sources/CairnCounter/main.swift) | The same for Counter. |
+| [`host/Sources/CairnTodo/main.swift`](host/Sources/CairnTodo/main.swift) | The same for TodoMVC. |
 
 ## What a claim looks like
 
